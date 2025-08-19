@@ -38,7 +38,9 @@ function ImageCompareTool() {
         img.onload = function() {
           const w = img.naturalWidth;
           const h = img.naturalHeight;
-          const maxWidth = 600; // 最大宽度
+          
+          // 根据屏幕宽度计算合适的显示尺寸
+          const maxWidth = window.innerWidth > 600 ? 600 : window.innerWidth * 0.9;
           const scale = w > maxWidth ? maxWidth / w : 1;
           const displayW = w * scale;
           const displayH = h * scale;
@@ -46,7 +48,8 @@ function ImageCompareTool() {
           // 设置容器尺寸
           $container.css({ 
             width: displayW + 'px', 
-            height: displayH + 'px' 
+            height: displayH + 'px',
+            maxWidth: '100%'
           });
           
           // 初始化新的实例

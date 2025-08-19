@@ -235,6 +235,7 @@ const globalStyles = `
     justify-content: center;
     margin: 30px 0;
     overflow: auto;
+    width: 100%;
   }
   
   /* TwentyTwenty容器样式 */
@@ -243,6 +244,7 @@ const globalStyles = `
     position: relative;
     box-sizing: content-box;
     overflow: hidden;
+    max-width: 100%;
   }
   
   .twentytwenty-container img {
@@ -305,5 +307,22 @@ const globalStyles = `
     .tool-header h1 {
       font-size: 2rem;
     }
+    
+    .image-compare-wrapper {
+      margin: 20px 0;
+    }
+    
+    .tool-section {
+      padding: 30px 0;
+    }
+    
+    .tool-header {
+      padding: 40px 0;
+    }
+  }
+  
+  /* 当在图片对比工具页面时，设置白色背景 */
+  .image-compare-page {
+    background-color: white;
   }
 `;
